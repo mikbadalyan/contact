@@ -1,29 +1,37 @@
-body {
-  font-family: system-ui, sans-serif;
+/* Reset */
+body, html {
   margin: 0;
   padding: 0;
-  background: #f5f5f5;
-  color: #333;
-  text-align: center;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow: hidden;
 }
 
-header {
-  background: #4f46e5;
-  color: white;
-  padding: 2rem 1rem;
+/* Particles background */
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 40%;
+  transform: translateY(-50%);
 }
 
 h1 {
-  margin: 0 0 0.5rem;
+  font-size: 3em;
+  margin-bottom: 0.5em;
 }
 
-main {
-  padding: 2rem 1rem;
-}
-
-footer {
-  background: #222;
-  color: #aaa;
-  padding: 1rem;
-  margin-top: 2rem;
+p {
+  font-size: 1.2em;
 }

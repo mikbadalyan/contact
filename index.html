@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mikayel Badalyan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Website with Particles</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to MikayelBadalyan.com</h1>
-    <p>This site is hosted on GitHub Pages with Cloudflare protection.</p>
-  </header>
+  <!-- Particles container -->
+  <div id="tsparticles"></div>
 
-  <main>
-    <section>
-      <h2>About</h2>
-      <p>This is a simple test page to confirm the setup works.</p>
-    </section>
-  </main>
+  <!-- Your content -->
+  <div class="content">
+    <h1>Mikayel Badalyan</h1>
+    <p>Welcome to my personal website</p>
+  </div>
 
-  <footer>
-    <p>© 2025 Mikayel Badalyan</p>
-  </footer>
+  <!-- tsparticles library -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script>
+    // Load config from particles.json
+    (async () => {
+      const response = await fetch("particlesjs-config.json");
+      const config = await response.json();
+      await tsParticles.load("tsparticles", config);
+    })();
+  </script>
 </body>
 </html>
